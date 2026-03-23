@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eitzaz Hassan | Software Engineering Student</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Profile Picture -->
+    <div class="profile-section">
+        <img src="APNI_PICTURE_KA_URL_YAHAN_DALEIN" alt="Eitzaz Hassan" class="profile-pic">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="about">About</a>
+            <a href="#" class="nav-link" data-page="projects">Projects</a>
+            <a href="#" class="nav-link" data-page="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active-page">
+        <div class="card">
+            <div class="emoji-decoration">👨‍💻✨</div>
+            <h1>Eitzaz Hassan</h1>
+            <h2>Software Engineering Student</h2>
+            <div class="university">University of Gujrat (UOG) | 2nd Semester</div>
+            <div class="divider"></div>
+            <p class="bio">Passionate about coding, building cool stuff, and learning new technologies every day.</p>
+            <button id="greetingBtn" class="btn-primary">✨ Let's Connect ✨</button>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" class="page">
+        <div class="card">
+            <h2>📌 About Me</h2>
+            <div class="about-content">
+                <p>Hi! I'm <strong>Eitzaz Hassan</strong>, a 2nd‑semester Software Engineering student at the <strong>University of Gujrat</strong>. I love turning ideas into reality through code.</p>
+                <p>I'm currently exploring front‑end development, and I enjoy creating interactive web experiences. Always eager to learn and grow!</p>
+                <div class="skills">
+                    <h3>💡 Skills</h3>
+                    <ul>
+                        <li>HTML / CSS / JavaScript</li>
+                        <li>Responsive Web Design</li>
+                        <li>Git & GitHub</li>
+                        <li>Problem Solving (C++)</li>
+                    </ul>
+                </div>
+                <div class="hobby">
+                    <h3>🎯 Hobbies</h3>
+                    <p>Coding, Gaming, Graphic Design, Badminton</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Page -->
+    <div id="projectsPage" class="page">
+        <div class="card">
+            <h2>🚀 My Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>Eid Mubarak Greeting Website</h3>
+                    <p>An interactive Eid website with fireworks, duas, and a clean UI. Hosted on GitHub Pages.</p>
+                    <a href="https://eitzaz404.github.io/eid_mubarak" target="_blank">View Project →</a>
+                </div>
+                <div class="project-item">
+                    <h3>Personal Portfolio</h3>
+                    <p>This very website — my digital home on the internet.</p>
+                    <a href="#">Live Demo</a>
+                </div>
+                <div class="project-item">
+                    <h3>Calculator App (In Progress)</h3>
+                    <p>A simple yet stylish calculator using HTML, CSS, and JS.</p>
+                    <a href="#">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contactPage" class="page">
+        <div class="card">
+            <h2>📬 Get in Touch</h2>
+            <div class="contact-info">
+                <p>📧 <a href="mailto:eitzaz.hassan@example.com">eitzaz.hassan@example.com</a></p>
+                <p>🐙 <a href="https://github.com/Eitzaz404" target="_blank">GitHub: @Eitzaz404</a></p>
+                <p>💼 <a href="https://linkedin.com/in/eitzaz-hassan" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">📸</a>
+            </div>
+            <p class="footer-note">Feel free to reach out – I'd love to connect!</p>
+        </div>
+    </div>
+
+    <canvas id="fireworks"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
