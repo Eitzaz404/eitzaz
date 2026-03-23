@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a2f2f 0%, #1a4a3a 50%, #0d2e2e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Profile Picture - BADI SIZE */
+.profile-section {
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.profile-pic {
+    width: 130px;          /* BADI PICTURE */
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid gold;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 160px;            /* Picture bari hai to thoda neeche */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    z-index: 100;
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.nav-link.active {
+    color: #1e3a2f;
+    background: gold;
+    box-shadow: 0 0 15px gold;
+}
+
+/* Pages */
+.page {
+    display: none;
+    width: 100%;
+    padding: 230px 20px 50px;  /* Top padding increased */
+}
+
+.page.active-page {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Card */
+.card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    padding: 40px 35px;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.emoji-decoration {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: float 3s infinite;
+}
+
+h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, gold, #ffaa33, #ffdd88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffd966;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.university {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, gold, transparent);
+    margin: 20px auto;
+}
+
+.bio {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, gold, #ffaa33);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #1e3a2f;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gold;
+}
+
+/* About Page */
+.about-content p {
+    color: white;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+.skills, .hobby {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.skills h3, .hobby h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills li {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.hobby p {
+    text-align: center;
+    background: rgba(255, 215, 0, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* Projects Page */
+.projects-list {
+    margin-top: 20px;
+}
+
+.project-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.project-item h3 {
+    color: gold;
+    margin-bottom: 8px;
+}
+
+.project-item p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+}
+
+.project-item a {
+    color: #ffd966;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Page */
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info a {
+    color: #ffd966;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-note {
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+/* Fireworks Canvas */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+
+    .navbar {
+        top: 120px;
+    }
+
+    .nav-container {
+        gap: 20px;
+    }
+
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .page {
+        padding: 180px 15px 40px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .bio {
+        font-size: 0.95rem;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+}
